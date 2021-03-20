@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.layout {
+  margin: 0 100px;
+}
 </style>

@@ -2,6 +2,9 @@
   <div class="about">
     <div class="top-logo">
       <img src="../../assets/images/about/top-logo.png" alt="">
+      <div class="top-logo-right">
+        <img src="../../assets/images/about/top-logo-right.png" alt="">
+      </div>
     </div>
     <div class="main-container">
       <div class="container-left">
@@ -61,9 +64,17 @@ export default {
     width: 100%;
     height: 300px;
     margin-top: 20px;
+    position: relative;
     img {
       width: 100%;
       height: 100%;
+    }
+    .top-logo-right {
+      position: absolute;
+      top: 75px;
+      right: 200px;
+      width: 400px;
+      height: 50px;
     }
   }
   .main-container {

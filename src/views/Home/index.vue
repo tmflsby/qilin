@@ -2,6 +2,12 @@
   <div class="home">
     <div class="top-logo">
       <img src="../../assets/images/home/top-logo.png" alt="">
+      <div class="top-logo-left">
+        <img src="../../assets/images/home/top-logo-left.png" alt="">
+      </div>
+      <div class="top-logo-right">
+        <img src="../../assets/images/home/top-logo-right.png" alt="">
+      </div>
     </div>
     <div class="main-container">
       <div class="container-left">
@@ -77,9 +83,24 @@ export default {
     width: 100%;
     height: 300px;
     margin-top: 20px;
+    position: relative;
     img {
       width: 100%;
       height: 100%;
+    }
+    .top-logo-left {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 500px;
+      height: 100px;
+    }
+    .top-logo-right {
+      position: absolute;
+      top: 75px;
+      right: 200px;
+      width: 400px;
+      height: 50px;
     }
   }
   .main-container {
