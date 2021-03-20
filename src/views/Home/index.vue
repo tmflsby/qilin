@@ -1,129 +1,216 @@
 <template>
   <div class="home">
-    <div class="thumb-example">
-      <!-- swiper1 -->
-      <swiper class="swiper gallery-top" :options="swiperOptionTop" ref="swiperTop">
-        <swiper-slide class="slide-1">
-          <img src="./images/1.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-2">
-          <img src="./images/2.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-3">
-          <img src="./images/3.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-4">
-          <img src="./images/4.jpg" alt="">
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-      </swiper>
-      <!-- swiper2 Thumbs -->
-      <swiper class="swiper gallery-thumbs" :options="swiperOptionThumbs" ref="swiperThumbs">
-        <swiper-slide class="slide-1">
-          <img src="./images/1.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-2">
-          <img src="./images/2.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-3">
-          <img src="./images/3.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide class="slide-4">
-          <img src="./images/4.jpg" alt="">
-        </swiper-slide>
-      </swiper>
+    <div class="top-logo">
+      <img src="../../assets/images/home/top-logo.png" alt="">
+    </div>
+    <div class="main-container">
+      <div class="container-left">
+        <div class="title">
+          <div class="title-logo">
+            <img src="../../assets/images/home/image-title.png" alt="">
+          </div>
+          <div>我们是做什么？</div>
+        </div>
+        <div class="images">
+          <div class="images1">
+            <img src="../../assets/images/home/1.png" alt="">
+          </div>
+          <div class="images2">
+            <img src="../../assets/images/home/2.png" alt="">
+          </div>
+          <div class="images3">
+            <img src="../../assets/images/home/3.png" alt="">
+          </div>
+          <div class="images4">
+            <img src="../../assets/images/home/4.png" alt="">
+          </div>
+          <div class="images5">
+            <img src="../../assets/images/home/5.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="left"></div>
+        <div class="right">
+          <div class="title">INDUSTRY NEWS 行业动态</div>
+          <div class="content">
+            <div class="des">
+              <div class="title">店招门头的重要性</div>
+              <div class="content">
+                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
+                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
+              </div>
+            </div>
+            <div class="des">
+              <div class="title">广告宣传的重要性</div>
+              <div class="content">
+                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
+                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
+              </div>
+            </div>
+            <div class="des">
+              <div class="title">Uv软膜新型广告材料的应用</div>
+              <div class="content">
+                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
+                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
 export default {
-  name: 'Home',
-  components: { Swiper, SwiperSlide },
-  directives: {
-    swiper: directive
-  },
-  data() {
-    return {
-      swiperOptionTop: {
-        direction: 'vertical',
-        loop: true,
-        loopedSlides: 4, // looped slides should be the same
-        spaceBetween: 10,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        }
-      },
-      swiperOptionThumbs: {
-        direction: 'vertical',
-        loop: true,
-        loopedSlides: 4, // looped slides should be the same
-        spaceBetween: 10,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true
-      }
-    }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      const swiperTop = this.$refs.swiperTop.$swiper
-      const swiperThumbs = this.$refs.swiperThumbs.$swiper
-      swiperTop.controller.control = swiperThumbs
-      swiperThumbs.controller.control = swiperTop
-    })
-  }
+  name: 'Home'
 }
 </script>
 
 <style lang="scss" scoped>
 .home {
   width: 100%;
-  height: 100%;
-  .thumb-example {
-    height: 380px;
-    width: 660px;
-    border-radius: 4px;
-    background-color: gray;
-    .gallery-top {
+  height: 900px;
+  background: #F1F1F2;
+  .top-logo {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    img {
+      width: 100%;
       height: 100%;
-      width: 520px;
+    }
+  }
+  .main-container {
+    width: 1200px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    .container-left {
+      width: 700px;
+      height: 100%;
       float: left;
-      img {
-        width: 480px;
-        height: 360px;
-        margin: 10px;
-        border-radius: 4px;
-      }
-    }
-    .gallery-thumbs {
-      height: 100%;
-      width: 140px;
+      padding: 20px;
       box-sizing: border-box;
-      float: right;
-      img {
-        width: 120px;
-        height: 90px;
-        margin: 0 10px;
-        border-radius: 4px;
+      .title {
+        width: 100%;
+        height: 25px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 25px;
+        .title-logo {
+          width: 150px;
+          height: 25px;
+          float: left;
+          margin-right: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .images {
+        width: 100%;
+        height: 400px;
+        padding: 20px 0;
+        .images1 {
+          width: 200px;
+          height: 200px;
+          padding-right: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .images2 {
+          width: 200px;
+          height: 200px;
+          padding-right: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .images3 {
+          width: 200px;
+          height: 200px;
+          padding-right: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .images4 {
+          width: 410px;
+          height: 200px;
+          padding-right: 10px;
+          padding-top: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .images5 {
+          width: 200px;
+          height: 200px;
+          padding-right: 10px;
+          padding-top: 10px;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
-    .swiper {
-      .swiper-slide {
-        background-size: cover;
-        background-position: center;
+    .container-right {
+      width: 500px;
+      height: 100%;
+      float: right;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      .left {
+        width: 10px;
+        height: 400px;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        border-left-color: #231916;
+        border-right-color: #231916;
+        border-left-width: 4px;
+        border-right-width: 2px;
+        border-left-style: solid;
+        border-right-style: solid;
+        box-sizing: border-box;
+        margin-right: 20px;
       }
-      &.gallery-thumbs .swiper-slide {
-        width: 100%;
-        height: 25%;
+      .right {
+        .title {
+          font-size: 25px;
+          color: #E71B20;
+          margin-bottom: 15px;
+        }
+        .content {
+          .des {
+            margin-bottom: 20px;
+            .title {
+              font-size: 18px;
+              font-weight: bold;
+              color: #251C19;
+              padding-bottom: 5px;
+              border-bottom-width: 1px;
+              border-bottom-style: dashed;
+            }
+          }
+        }
       }
     }
   }

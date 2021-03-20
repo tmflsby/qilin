@@ -1,0 +1,104 @@
+<template>
+  <div class="business-card">
+    <div class="main-container">
+      <div class="container-left">
+        <div class="images">
+          <img src="../../assets/images/businessCard/1.png" alt="">
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <div class="zh">企业画册设计方案</div>
+          <div class="en">BUSINESS CARD</div>
+        </div>
+        <div class="content">
+          <p>
+            产品宣扬画册是各种企业都必弗成少的产品介绍和宣扬品，由于产品宜扬回册可以更好的对相干产品的信息中止全面的介绍，一起，也可以经过这类介绍起到对产品的宣扬和推广的感化，所以，近年米，
+            各种的企业都对产品画册有着较大的需求，抵挡一些设计和印刷质量好的印刷设计公司，每一年都邑承接大批的产品画册生产制作定单，那末，抵挡产品宣扬画册设计公司，要为用户前进产品设计的时间，怎么去表白设计要素呢?
+          </p>
+          <p>
+            产品宣扬画册设计公司在中止专业设计的时间，更多的时间会在生杨的主题，宣扬主题是中正产品画册设计的重要头绪，优秀的企业画册都有好的主题，提麻主题是产品画册设计的第一步。
+            主题是对品牌发展策略、企业形象策略、营销策略的提炼和畅通领悟。
+          </p>
+          <p>
+            对产品宣扬画册设计中正合理的结构和分配也是适当重要的，它偶尔常常抉择着产品画册设计可否合理，然后影响产品画册可否受人人迎候，优秀的企业画册必定有一个好的“导演”，
+            这个导演就是对产品面册的编列，有好的架构的产品画册，就有了节拍，然后提升产品画册的制作质量。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'BusinessCard'
+}
+</script>
+
+<style lang="scss" scoped>
+.business-card {
+  width: 100%;
+  height: 800px;
+  background: #F1F1F2;
+  .main-container {
+    width: 1200px;
+    height: 750px;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .container-left {
+      width: 250px;
+      height: 100%;
+      float: left;
+      padding-top: 25px;
+      .images {
+        width: 250px;
+        height: 700px;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .container-right {
+      width: 650px;
+      height: 100%;
+      float: left;
+      padding-top: 75px;
+      .title {
+        font-size: 25px;
+        color: #E71B20;
+        position: relative;
+        height: 100px;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        .zh {
+          position: absolute;
+          width: 400px;
+          top: 0;
+          left: 0;
+        }
+        .en {
+          position: absolute;
+          width: calc(100% - 40px);
+          top: 30px;
+          left: 30px;
+          border-top-style: solid;
+          border-top-width: 1px;
+          border-top-color: #E71B20;
+        }
+      }
+      .content {
+        p {
+          letter-spacing: 2px;
+          line-height: 25px;
+          color: rgba(0, 0, 0, .8);
+        }
+      }
+    }
+  }
+}
+</style>
