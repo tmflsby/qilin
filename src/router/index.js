@@ -8,12 +8,12 @@ const routes = [
     path: '/',
     name: 'Layout',
     redirect: '/home',
-    component: () => import(/* webpackChunkName: "about" */ '@/layout')
+    component: () => import(/* webpackChunkName: "layout" */ '@/layout')
   },
   {
     path: '/home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/Home')
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home')
   },
   {
     path: '/about',
@@ -23,27 +23,44 @@ const routes = [
   {
     path: '/caseshow',
     name: 'CaseShow',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/CaseShow')
+    component: () => import(/* webpackChunkName: "caseShow" */ '@/views/CaseShow')
   },
   {
     path: '/culturalwall',
     name: 'CulturalWall',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/CulturalWall')
+    component: () => import(/* webpackChunkName: "culturalWall" */ '@/views/CulturalWall')
   },
   {
     path: '/shopsign',
     name: 'ShopSign',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/ShopSign')
+    component: () => import(/* webpackChunkName: "shopSign" */ '@/views/ShopSign')
   },
   {
     path: '/luminouswords',
     name: 'LuminousWords',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/LuminousWords')
+    component: () => import(/* webpackChunkName: "luminousWords" */ '@/views/LuminousWords')
   },
   {
     path: '/businesscard',
     name: 'BusinessCard',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/BusinessCard')
+    component: () => import(/* webpackChunkName: "businessCard" */ '@/views/BusinessCard')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "contact" */ '@/views/Contact')
+  },
+  {
+    path: '/contact/1',
+    component: () => import(/* webpackChunkName: "contact1" */ '@/views/Contact/Contact1')
+  },
+  {
+    path: '/contact/2',
+    component: () => import(/* webpackChunkName: "contact2" */ '@/views/Contact/Contact2')
+  },
+  {
+    path: '/contact/3',
+    component: () => import(/* webpackChunkName: "contact3" */ '@/views/Contact/Contact3')
   }
 ]
 

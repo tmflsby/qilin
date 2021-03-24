@@ -9,13 +9,13 @@
       </div>
       <div class="nav">
         <router-link to="/home">
-          <el-button>
+          <el-button type="primary">
             <div>首页</div>
             <div>HOME</div>
           </el-button>
         </router-link>
         <el-dropdown>
-          <el-button>
+          <el-button type="primary">
             <div>特色产品</div>
             <div>PRODUCT</div>
           </el-button>
@@ -35,19 +35,19 @@
           </el-dropdown-menu>
         </el-dropdown>
         <router-link to="/about">
-          <el-button>
+          <el-button type="primary">
             <div>关于我们</div>
             <div>ABOUT</div>
           </el-button>
         </router-link>
         <router-link to="/caseshow">
-          <el-button>
+          <el-button type="primary">
             <div>案例展示</div>
             <div>CASE SHOW</div>
           </el-button>
         </router-link>
         <router-link to="/contact">
-          <el-button>
+          <el-button type="primary">
             <div>联系我们</div>
             <div>CONTACT</div>
           </el-button>
@@ -65,12 +65,11 @@ export default {
 
 <style lang="scss">
 .el-dropdown-menu {
-  width: 120px;
+  width: 100px;
   background: #C9C9CA !important;
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  border-radius: 0 !important;
 }
 .popper__arrow {
   display: none !important;
@@ -113,17 +112,17 @@ export default {
     }
     .nav {
       position: absolute;
-      right: 100px;
+      right: 75px;
       top: 30px;
-      width: 650px;
+      width: 600px;
       display: flex;
       justify-content: space-around;
       .el-button {
-        width: 120px;
-        background: #163460;
+        width: 100px;
+        //background: #3b7cdb;
         color: #EBE9EE;
         margin: 0;
-        border-radius: 0;
+        padding: 10px 0;
         div:first-child {
           margin-bottom: 5px;
         }

@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .layout {
-  margin: 0 100px;
+  margin: 0 auto;
+  width: 1400px;
 }
 </style>

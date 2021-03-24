@@ -38,28 +38,16 @@
       <div class="container-right">
         <div class="left"></div>
         <div class="right">
-          <div class="title">INDUSTRY NEWS 行业动态</div>
+          <router-link class="title" to="/contact" tag="div">INDUSTRY NEWS 行业动态</router-link>
           <div class="content">
             <div class="des">
-              <div class="title">店招门头的重要性</div>
-              <div class="content">
-                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
-                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
-              </div>
+              <router-link class="title" to="/contact/1" tag="div">一、店招门头的重要性</router-link>
             </div>
             <div class="des">
-              <div class="title">广告宣传的重要性</div>
-              <div class="content">
-                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
-                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
-              </div>
+              <router-link class="title" to="/contact/2" tag="div">二、广告宣传的重要性</router-link>
             </div>
             <div class="des">
-              <div class="title">Uv软膜新型广告材料的应用</div>
-              <div class="content">
-                企业做宣传片首先要明确目的。为什么要做宣传片，企业制作宣传片是为了提升企业的形象还是
-                介绍产品？如果是为了提升企业形象那当然是做企业形象片。
-              </div>
+              <router-link class="title" to="/contact/3" tag="div">三、标识标牌导视系统</router-link>
             </div>
           </div>
         </div>
@@ -90,17 +78,17 @@ export default {
     }
     .top-logo-left {
       position: absolute;
-      top: 100px;
-      left: 100px;
-      width: 500px;
+      top: 80px;
+      left: 80px;
+      width: 450px;
       height: 100px;
     }
     .top-logo-right {
       position: absolute;
-      top: 75px;
-      right: 200px;
+      top: 50px;
+      right: 125px;
       width: 400px;
-      height: 50px;
+      height: 40px;
     }
   }
   .main-container {
@@ -218,10 +206,12 @@ export default {
           font-size: 25px;
           color: #E71B20;
           margin-bottom: 15px;
+          margin-left: 20px;
+          cursor: pointer;
         }
         .content {
           .des {
-            margin-bottom: 20px;
+            margin: 25px 5px;
             .title {
               font-size: 18px;
               font-weight: bold;
