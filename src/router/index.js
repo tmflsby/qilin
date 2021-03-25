@@ -45,22 +45,38 @@ const routes = [
     name: 'BusinessCard',
     component: () => import(/* webpackChunkName: "businessCard" */ '@/views/BusinessCard')
   },
+  // {
+  //   path: '/contact',
+  //   name: 'Contact',
+  //   component: () => import(/* webpackChunkName: "contact" */ '@/views/IndustryNews')
+  // },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '@/views/Contact')
+    path: '/industrynews/1',
+    component: () => import(/* webpackChunkName: "industryNews1" */ '@/views/IndustryNews/IndustryNews1')
   },
   {
-    path: '/contact/1',
-    component: () => import(/* webpackChunkName: "contact1" */ '@/views/Contact/Contact1')
+    path: '/industrynews/2',
+    component: () => import(/* webpackChunkName: "industryNews2" */ '@/views/IndustryNews/IndustryNews2')
   },
   {
-    path: '/contact/2',
-    component: () => import(/* webpackChunkName: "contact2" */ '@/views/Contact/Contact2')
+    path: '/industrynews/3',
+    component: () => import(/* webpackChunkName: "industryNews3" */ '@/views/IndustryNews/IndustryNews3')
   },
   {
-    path: '/contact/3',
-    component: () => import(/* webpackChunkName: "contact3" */ '@/views/Contact/Contact3')
+    path: '/industrynews/4',
+    component: () => import(/* webpackChunkName: "industryNews4" */ '@/views/IndustryNews/IndustryNews4')
+  },
+  {
+    path: '/industrynews/5',
+    component: () => import(/* webpackChunkName: "industryNews5" */ '@/views/IndustryNews/IndustryNews5')
+  },
+  {
+    path: '/industrynews/6',
+    component: () => import(/* webpackChunkName: "industryNews6" */ '@/views/IndustryNews/IndustryNews6')
+  },
+  {
+    path: '/industrynews/7',
+    component: () => import(/* webpackChunkName: "industryNews7" */ '@/views/IndustryNews/IndustryNews7')
   }
 ]
 

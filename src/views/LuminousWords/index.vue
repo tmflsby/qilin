@@ -2,9 +2,7 @@
   <div class="luminous-words">
     <div class="main-container">
       <div class="container-left">
-        <div class="images">
-          <img src="../../assets/images/luminousWords/1.png" alt="">
-        </div>
+        <el-image class="images" :src="images1" fit="fill" lazy></el-image>
       </div>
       <div class="container-right">
         <div class="title">
@@ -39,8 +37,14 @@
 </template>
 
 <script>
+import images1 from '@/assets/images/luminousWords/1.png'
 export default {
-  name: 'LuminousWords'
+  name: 'LuminousWords',
+  data() {
+    return {
+      images1
+    }
+  }
 }
 </script>
 
@@ -65,10 +69,6 @@ export default {
         width: 250px;
         height: 700px;
         margin-bottom: 10px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
       }
     }
     .container-right {

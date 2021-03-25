@@ -28,17 +28,21 @@
         </div>
       </div>
       <div class="container-right">
-        <div class="images">
-          <img src="../../assets/images/shopSign/1.png" alt="">
-        </div>
+        <el-image class="images" :src="images1" fit="fill" lazy></el-image>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import images1 from '@/assets/images/shopSign/1.png'
 export default {
-  name: 'ShopSign'
+  name: 'ShopSign',
+  data() {
+    return {
+      images1
+    }
+  }
 }
 </script>
 
@@ -50,7 +54,6 @@ export default {
   .main-container {
     width: 1200px;
     height: 750px;
-    padding-top: 50px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -94,15 +97,11 @@ export default {
       width: 250px;
       height: 100%;
       float: left;
-      padding-top: 25px;
+      padding-top: 50px;
       .images {
         width: 250px;
         height: 700px;
         margin-bottom: 10px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
       }
     }
   }

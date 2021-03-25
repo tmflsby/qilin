@@ -1,9 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer-logo">
-      <div class="logo">
-        <img src="../../assets/images/footer-logo.png" alt="">
-      </div>
+      <el-image class="logo" :src="logo" fit="fill" lazy></el-image>
     </div>
     <div class="address-email">
       <div class="left"></div>
@@ -20,8 +18,14 @@
 </template>
 
 <script>
+import logo from '@/assets/images/footer-logo.png'
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      logo
+    }
+  }
 }
 </script>
 

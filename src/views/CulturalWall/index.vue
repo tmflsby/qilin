@@ -1,20 +1,12 @@
 <template>
   <div class="cultural-wall">
-    <div class="top-logo">
-      <img src="../../assets/images/culturalWall/top-logo.png" alt="">
-    </div>
+    <el-image class="top-logo" :src="topLogo" fit="fill" lazy></el-image>
     <div class="main-container">
       <div class="container-left">
         <div class="images">
-          <div class="images1">
-            <img src="../../assets/images/culturalWall/1.png" alt="">
-          </div>
-          <div class="images2">
-            <img src="../../assets/images/culturalWall/2.png" alt="">
-          </div>
-          <div class="images3">
-            <img src="../../assets/images/culturalWall/3.png" alt="">
-          </div>
+          <el-image class="images1" :src="images1" fit="fill" lazy></el-image>
+          <el-image class="images2" :src="images2" fit="fill" lazy></el-image>
+          <el-image class="images3" :src="images3" fit="fill" lazy></el-image>
         </div>
       </div>
       <div class="container-right">
@@ -41,24 +33,32 @@
 </template>
 
 <script>
+import topLogo from '@/assets/images/culturalWall/top-logo.png'
+import images1 from '@/assets/images/culturalWall/1.png'
+import images2 from '@/assets/images/culturalWall/2.png'
+import images3 from '@/assets/images/culturalWall/3.png'
 export default {
-  name: 'CulturalWall'
+  name: 'CulturalWall',
+  data() {
+    return {
+      topLogo,
+      images1,
+      images2,
+      images3
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .cultural-wall {
   width: 100%;
-  height: 950px;
+  height: 1000px;
   background: #F1F1F2;
   .top-logo {
     width: 100%;
     height: 400px;
     margin-top: 20px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
   .main-container {
     width: 1200px;
@@ -80,28 +80,16 @@ export default {
           width: 250px;
           height: 200px;
           margin-bottom: 10px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
         .images2 {
           width: 250px;
           height: 100px;
           margin-bottom: 10px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
         .images3 {
           width: 250px;
           height: 100px;
           margin-bottom: 10px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
       }
     }

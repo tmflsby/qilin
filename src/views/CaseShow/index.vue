@@ -53,11 +53,11 @@ export default {
 <style lang="scss" scoped>
 .case-show {
   width: 100%;
-  height: 900px;
+  height: 1050px;
   background: #F1F1F2;
   .main-container {
     width: 1200px;
-    height: 800px;
+    height: 950px;
     padding-top: 50px;
     margin: 0 auto;
     .container-left, .container-mid, .container-right {
@@ -96,8 +96,8 @@ export default {
         }
       }
       .image {
-        width: 300px;
-        height: 700px;
+        width: 350px;
+        height: 840px;
         margin: 20px auto;
         img {
           width: 100%;

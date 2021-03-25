@@ -1,12 +1,8 @@
 <template>
   <div class="header">
-    <div class="header-top">
-      <img src="../../assets/images/header-top.png" alt="">
-    </div>
+    <el-image class="header-top" :src="headerTop" fit="fill" lazy></el-image>
     <div class="header-nav">
-      <div class="logo">
-        <img src="../../assets/images/header-logo.png" alt="">
-      </div>
+      <el-image class="logo" :src="logo" fit="fill" lazy></el-image>
       <div class="nav">
         <router-link to="/home">
           <el-button type="primary">
@@ -46,20 +42,28 @@
             <div>CASE SHOW</div>
           </el-button>
         </router-link>
-        <router-link to="/contact">
-          <el-button type="primary">
-            <div>联系我们</div>
-            <div>CONTACT</div>
-          </el-button>
-        </router-link>
+<!--        <router-link to="/contact">-->
+<!--          <el-button type="primary">-->
+<!--            <div>联系我们</div>-->
+<!--            <div>CONTACT</div>-->
+<!--          </el-button>-->
+<!--        </router-link>-->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import headerTop from '@/assets/images/header-top.png'
+import logo from '@/assets/images/header-logo.png'
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+    return {
+      headerTop,
+      logo
+    }
+  }
 }
 </script>
 
@@ -87,10 +91,6 @@ export default {
   .header-top {
     width: 100%;
     height: 50px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
   .header-nav {
     width: 100%;
@@ -105,16 +105,12 @@ export default {
       position: absolute;
       top: 10px;
       left: 80px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
     .nav {
       position: absolute;
       right: 75px;
       top: 30px;
-      width: 600px;
+      width: 500px;
       display: flex;
       justify-content: space-around;
       .el-button {

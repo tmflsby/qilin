@@ -1,23 +1,15 @@
 <template>
   <div class="about">
     <div class="top-logo">
-      <img src="../../assets/images/about/top-logo.png" alt="">
-      <div class="top-logo-right">
-        <img src="../../assets/images/about/top-logo-right.png" alt="">
-      </div>
+      <el-image class="top-logo-bg" :src="topLogoBg" fit="fill" lazy></el-image>
+      <el-image class="top-logo-right" :src="topLogoRight" fit="fill" lazy></el-image>
     </div>
     <div class="main-container">
       <div class="container-left">
         <div class="images">
-          <div class="images1">
-            <img src="../../assets/images/about/1.png" alt="">
-          </div>
-          <div class="images2">
-            <img src="../../assets/images/about/2.png" alt="">
-          </div>
-          <div class="images3">
-            <img src="../../assets/images/about/3.png" alt="">
-          </div>
+          <el-image class="images1" :src="images1" fit="fill" lazy></el-image>
+          <el-image class="images2" :src="images2" fit="fill" lazy></el-image>
+          <el-image class="images3" :src="images3" fit="fill" lazy></el-image>
         </div>
       </div>
       <div class="container-right">
@@ -50,8 +42,22 @@
 </template>
 
 <script>
+import topLogoBg from '@/assets/images/about/top-logo.png'
+import topLogoRight from '@/assets/images/about/top-logo-right.png'
+import images1 from '@/assets/images/about/1.png'
+import images2 from '@/assets/images/about/2.png'
+import images3 from '@/assets/images/about/3.png'
 export default {
-  name: 'About'
+  name: 'About',
+  data() {
+    return {
+      topLogoBg,
+      topLogoRight,
+      images1,
+      images2,
+      images3
+    }
+  }
 }
 </script>
 
@@ -65,7 +71,7 @@ export default {
     height: 300px;
     margin-top: 20px;
     position: relative;
-    img {
+    .top-logo-bg {
       width: 100%;
       height: 100%;
     }
@@ -74,7 +80,7 @@ export default {
       top: 50px;
       right: 125px;
       width: 400px;
-      height: 50px;
+      height: 40px;
     }
   }
   .main-container {
@@ -98,28 +104,16 @@ export default {
           width: 200px;
           height: 100px;
           margin-bottom: 20px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
         .images2 {
           width: 150px;
           height: 100px;
           margin-bottom: 20px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
         .images3 {
           width: 200px;
           height: 100px;
           margin-bottom: 20px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
         }
       }
     }
