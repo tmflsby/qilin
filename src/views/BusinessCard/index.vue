@@ -39,11 +39,10 @@ export default {
 <style lang="scss" scoped>
 .business-card {
   width: 100%;
-  height: 800px;
+  height: 750px;
   background: #F1F1F2;
   .main-container {
     width: 1200px;
-    height: 750px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -52,11 +51,6 @@ export default {
       height: 100%;
       float: left;
       padding-top: 50px;
-      .images {
-        width: 250px;
-        height: 700px;
-        margin-bottom: 10px;
-      }
     }
     .container-right {
       width: 650px;
@@ -88,6 +82,8 @@ export default {
       }
       .content {
         p {
+          text-align: left;
+          text-indent: 36px;
           letter-spacing: 2px;
           line-height: 25px;
           color: rgba(0, 0, 0, .8);

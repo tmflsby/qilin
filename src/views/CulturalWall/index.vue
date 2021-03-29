@@ -76,19 +76,7 @@ export default {
         flex-direction: column;
         justify-content: space-around;
         padding: 25px;
-        .images1 {
-          width: 250px;
-          height: 200px;
-          margin-bottom: 10px;
-        }
-        .images2 {
-          width: 250px;
-          height: 100px;
-          margin-bottom: 10px;
-        }
-        .images3 {
-          width: 250px;
-          height: 100px;
+        .images1, .images2 {
           margin-bottom: 10px;
         }
       }
@@ -122,6 +110,8 @@ export default {
       }
       .content {
         p {
+          text-align: left;
+          text-indent: 36px;
           letter-spacing: 2px;
           line-height: 25px;
           color: rgba(0, 0, 0, .8);

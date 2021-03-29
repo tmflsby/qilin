@@ -8,13 +8,12 @@
     <div class="main-container">
       <div class="container-left">
         <div class="title">
-          <div class="title-logo">
-            <img src="../../assets/images/home/image-title.png" alt="">
-          </div>
-          <div>我们能做什么？</div>
+          <el-image class="title-logo" :src="titleLogo" fit="fill" lazy></el-image>
+          <div class="en">WHAT CAN WE DO</div>
+          <div class="zh">我们能做什么？</div>
         </div>
         <div class="images">
-          <el-image class="images1" :src="images1" fit="fill" lazy :preview-src-list="srcList"></el-image>
+          <el-image class="images1" :src="images1" fit="fill" lazy></el-image>
           <el-image class="images2" :src="images2" fit="fill" lazy></el-image>
           <el-image class="images3" :src="images3" fit="fill" lazy></el-image>
           <el-image class="images4" :src="images4" fit="fill" lazy></el-image>
@@ -24,7 +23,7 @@
       <div class="container-right">
         <div class="left"></div>
         <div class="right">
-          <router-link class="title" to="/contact" tag="div">INDUSTRY NEWS 行业动态</router-link>
+          <div class="title">INDUSTRY NEWS 行业动态</div>
           <div class="content">
             <div class="des">
               <router-link class="title" to="/industrynews/1" tag="div">一、为什么一个好的企业要做VI系统</router-link>
@@ -58,6 +57,7 @@
 import topLogoBg from '@/assets/images/home/top-logo.png'
 import topLogoLeft from '@/assets/images/home/top-logo-left.png'
 import topLogoRight from '@/assets/images/home/top-logo-right.png'
+import titleLogo from '@/assets/images/home/image-title.png'
 import images1 from '@/assets/images/home/1.png'
 import images2 from '@/assets/images/home/2.png'
 import images3 from '@/assets/images/home/3.png'
@@ -70,6 +70,7 @@ export default {
       topLogoBg,
       topLogoLeft,
       topLogoRight,
+      titleLogo,
       images1,
       images2,
       images3,
@@ -130,14 +131,15 @@ export default {
         font-weight: bold;
         line-height: 25px;
         .title-logo {
-          width: 150px;
+          width: 25px;
           height: 25px;
           float: left;
           margin-right: 20px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
+        }
+        .en {
+          float: left;
+          color: #9B9A99;
+          margin-right: 25px;
         }
       }
       .images {
@@ -214,6 +216,7 @@ export default {
             .title {
               font-size: 18px;
               font-weight: bold;
+              font-family: '宋体';
               color: #251C19;
               padding-bottom: 5px;
               border-bottom-width: 1px;

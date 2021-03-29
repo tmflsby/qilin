@@ -28,7 +28,6 @@ export default {
     margin: 50px auto;
     padding: 0 20px;
     display: flex;
-    flex-direction: column;
     .content {
       width: 100%;
       display: flex;

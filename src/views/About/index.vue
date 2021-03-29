@@ -30,6 +30,7 @@
             目前，麒麟已与多家富平企事业单位建立长期友好合作关系。拥有了一套完善、成熟的设计营销推广体系人员，并在此基础上建立起完整的设计、
             推广等全程服务，以丰富的市场实践经验和强大的设计营销队伍，为客户提供包括市场分析、设计策略制定及实施的全程设计推广服务。
           </p>
+          <el-image class="about-image" :src="aboutImage" fit="fill" lazy></el-image>
           <h3>我们的愿景</h3>
           <p>
             通过持续探索广告领域的前沿理论，不断强化业务技能并提升专业服务水准，以积极热忱的敬业精神和细致周到的服务，
@@ -47,6 +48,7 @@ import topLogoRight from '@/assets/images/about/top-logo-right.png'
 import images1 from '@/assets/images/about/1.png'
 import images2 from '@/assets/images/about/2.png'
 import images3 from '@/assets/images/about/3.png'
+import aboutImage from '@/assets/images/about/about.jpg'
 export default {
   name: 'About',
   data() {
@@ -55,7 +57,8 @@ export default {
       topLogoRight,
       images1,
       images2,
-      images3
+      images3,
+      aboutImage
     }
   }
 }
@@ -64,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  height: 950px;
+  height: 1300px;
   background: #F1F1F2;
   .top-logo {
     width: 100%;
@@ -100,20 +103,8 @@ export default {
         justify-content: space-around;
         align-items: flex-end;
         padding: 25px;
-        .images1 {
-          width: 200px;
-          height: 100px;
-          margin-bottom: 20px;
-        }
-        .images2 {
-          width: 150px;
-          height: 100px;
-          margin-bottom: 20px;
-        }
-        .images3 {
-          width: 200px;
-          height: 100px;
-          margin-bottom: 20px;
+        .images1, .images2 {
+          margin-bottom: 75px;
         }
       }
     }
@@ -146,6 +137,8 @@ export default {
       }
       .content {
         p {
+          text-align: left;
+          text-indent: 36px;
           letter-spacing: 2px;
           line-height: 25px;
           color: rgba(0, 0, 0, .8);

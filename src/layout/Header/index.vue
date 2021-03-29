@@ -2,6 +2,7 @@
   <div class="header">
     <el-image class="header-top" :src="headerTop" fit="fill" lazy></el-image>
     <div class="header-nav">
+      <el-image class="logo-bg" :src="headerBg" fit="fill" lazy></el-image>
       <el-image class="logo" :src="logo" fit="fill" lazy></el-image>
       <div class="nav">
         <router-link to="/home">
@@ -54,12 +55,14 @@
 </template>
 
 <script>
+import headerBg from '@/assets/images/header-bg.jpg'
 import headerTop from '@/assets/images/header-top.png'
 import logo from '@/assets/images/header-logo.png'
 export default {
   name: 'Header',
   data() {
     return {
+      headerBg,
       headerTop,
       logo
     }
@@ -99,6 +102,10 @@ export default {
     border-bottom-width: 5px;
     border-bottom-style: solid;
     position: relative;
+    .logo-bg {
+      width: 100%;
+      height: 100px;
+    }
     .logo {
       width: 300px;
       height: 80px;
@@ -115,7 +122,6 @@ export default {
       justify-content: space-around;
       .el-button {
         width: 100px;
-        //background: #3b7cdb;
         color: #EBE9EE;
         margin: 0;
         padding: 10px 0;
