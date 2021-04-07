@@ -7,6 +7,8 @@
     <div class="main-container">
       <div class="container-left">
         <div class="images">
+          <div class="mask"></div>
+          <el-image class="about-image" :src="aboutImage" fit="fill" lazy></el-image>
           <el-image class="images1" :src="images1" fit="fill" lazy></el-image>
           <el-image class="images2" :src="images2" fit="fill" lazy></el-image>
           <el-image class="images3" :src="images3" fit="fill" lazy></el-image>
@@ -30,7 +32,10 @@
             目前，麒麟已与多家富平企事业单位建立长期友好合作关系。拥有了一套完善、成熟的设计营销推广体系人员，并在此基础上建立起完整的设计、
             推广等全程服务，以丰富的市场实践经验和强大的设计营销队伍，为客户提供包括市场分析、设计策略制定及实施的全程设计推广服务。
           </p>
-          <el-image class="about-image" :src="aboutImage" fit="fill" lazy></el-image>
+          <br>
+          <br>
+          <br>
+          <br>
           <h3>我们的愿景</h3>
           <p>
             通过持续探索广告领域的前沿理论，不断强化业务技能并提升专业服务水准，以积极热忱的敬业精神和细致周到的服务，
@@ -67,7 +72,7 @@ export default {
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  height: 1300px;
+  height: 1100px;
   background: #F1F1F2;
   .top-logo {
     width: 100%;
@@ -98,13 +103,24 @@ export default {
       height: 100%;
       float: left;
       .images {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-end;
         padding: 25px;
-        .images1, .images2 {
-          margin-bottom: 75px;
+        .images1, .images2, .about-image {
+          margin-bottom: 10px;
+        }
+        .mask {
+          z-index: 10;
+          position: absolute;
+          top: 118px;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-bottom: 65px solid #F1F1F2;
+          border-left: 75px solid transparent;
         }
       }
     }
